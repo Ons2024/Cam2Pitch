@@ -2,6 +2,10 @@
 
 Cam2Pitch is a computer vision project that leverages YOLO object detection to identify and transform soccer fields in videos. The project processes video frames, detects the field, and overlays a semi-transparent pitch on top of the detected field, generating a new output video.
 
+Here is a demo image of the project:
+
+![Project Demo](demo.png)
+
 ## Features
 
 - **Field Detection**: Uses YOLO object detection to identify soccer fields in video frames.
