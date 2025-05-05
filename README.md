@@ -8,6 +8,25 @@ Cam2Pitch is a computer vision project that leverages YOLO object detection to i
 - **Pitch Overlay**: Applies a semi-transparent pitch overlay on the detected field.
 - **Video Processing**: Outputs a transformed video with the overlaid pitch.
 
+## Steps Involved:
+
+1. **Dataset Creation**:
+   - A custom dataset was created by detecting the corners (keypoints) of the soccer field in various images and videos.
+   - These keypoints were manually annotated or extracted using corner detection techniques.
+   - The dataset was then paired with a synthetic soccer field model, ensuring that the detected keypoints matched the corners of the synthetic field.
+   
+2. **Keypoint Detection**:
+   - A deep learning model was trained to detect the keypoints on the soccer field in images. This model learned to match the keypoints detected in the real-world video frames to the synthetic field model.
+   
+3. **Homography Generation**:
+   - Using the detected keypoints in the real-world video, the model computes a **homography matrix** to map the camera view of the soccer field to the synthetic field.
+   - This homography matrix is used to transform the field in the video to fit the dimensions and view of the synthetic field.
+
+4. **Field Transformation**:
+   - After applying the homography, the video frame is transformed to align with the synthetic field.
+   - A semi-transparent overlay of the synthetic field is applied to the transformed video, creating a visual effect where the soccer field appears to be aligned with the synthetic pitch.
+
+
 ## Installation
 
 To get started with Cam2Pitch, follow these steps:
